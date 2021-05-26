@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BookList.Models.Books>
+
+
+<head>
+    <title>
+        Virtual Book Store | Delisted Books
+    </title>
+</head>
+
+<h1>Virtual Book Store</h1>
+<h3>Delisted Books</h3>
+
+@{
+    int c = 0;
+}
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Publisher)
+                </th>
+                <th>
+                    Enlist?
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                @if (item.BookName != null)
+                {
+                    c = c + 1;
+                }
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BookName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Publisher)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Enlist", "Enlist", "Books", new { name = item.BookName })
+
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+
+}
+@if (c == 0)
+{
+    <h1>There are No Delisted Books</h1>
+}
+<input type="button" value="Cancel" class="btn btn-info" onclick="location.href='@Url.Action("Index", "Books")'" />

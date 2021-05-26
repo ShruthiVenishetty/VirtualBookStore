@@ -1,0 +1,86 @@
+﻿* {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+body {
+    background-image: url("https://www.nurseryworld.co.uk/media/210806/adobestock_182710251.jpeg?&width=780&quality=60");
+   background-size:cover;
+    
+}
+#c1 {
+    font-family: Georgia, serif;
+    font-size:large;
+    
+
+}
+a {
+    color: white;
+}
+
+
+
+h1, h3 {
+    color: #49091b;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+
+
+h1, table, h3 {
+    text-align: center;
+}
+
+.link{
+    color:white;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto 5rem;
+}
+
+
+
+th, td {
+    padding: 2rem;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+
+
+
+tr {
+    background: hsl(347, 44%, 36%);
+}
+
+
+
+
+
+    tr:nth-child(even) {
+        background: hsla(347, 44%, 36%, 0.7);
+    }
+
+
+
+
+
+td:empty {
+    background: hsla(50, 25%, 60%, 0.7);
+}
+
+
+
+#name {
+    color: white;
+}
+
+.myactionlink {
+    color: white;
+}
+
